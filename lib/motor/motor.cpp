@@ -1,11 +1,6 @@
 #include "motor.h"
 
 
-Motor::Motor(bool inverted)
-{
-  mInverted = inverted;
-}
-
 float Motor::getSpeed()
 {
   return mSpeed;
@@ -14,4 +9,8 @@ float Motor::getSpeed()
 void Motor::stop()
 {
   set(0.0);
+}
+void Motor::setInverted(bool inverted)
+{
+  mInverted = inverted;
 }

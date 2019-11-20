@@ -9,7 +9,7 @@ class Motor
   public:
    static constexpr float maxSpeed = 1.0;
    static constexpr float minSpeed = -1.0;
-   Motor(bool inverted);
+   virtual ~Motor() {};
    virtual void set(float speed);
    float getSpeed();
    void stop();
