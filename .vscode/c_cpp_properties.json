@@ -1,0 +1,65 @@
+{
+    "configurations": [
+        {
+            "name": "!!! WARNING !!! AUTO-GENERATED FILE, PLEASE DO NOT MODIFY IT AND USE https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags"
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "/home/andrew/Documents/PlatformIO/Projects/Powerwheelsv2/include",
+                "/home/andrew/Documents/PlatformIO/Projects/Powerwheelsv2/src",
+                "/home/andrew/.platformio/lib/Servo_ID883/src",
+                "/home/andrew/Documents/PlatformIO/Projects/Powerwheelsv2/.pio/libdeps/megaatmega2560/RTC_ID274/src",
+                "/home/andrew/Documents/PlatformIO/Projects/Powerwheelsv2/.pio/libdeps/megaatmega2560/SD_ID161",
+                "/home/andrew/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src",
+                "/home/andrew/.platformio/packages/framework-arduinoavr/cores/arduino",
+                "/home/andrew/.platformio/packages/framework-arduinoavr/variants/mega",
+                "/home/andrew/Documents/PlatformIO/Projects/Powerwheelsv2/lib/motor",
+                "/home/andrew/Documents/PlatformIO/Projects/Powerwheelsv2/lib/sparkMotor",
+                "/home/andrew/.platformio/lib/RTClib_ID83",
+                "/home/andrew/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/EEPROM/src",
+                "/home/andrew/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/HID/src",
+                "/home/andrew/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SoftwareSerial/src",
+                "/home/andrew/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src",
+                "/home/andrew/.platformio/packages/tool-unity",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "/home/andrew/Documents/PlatformIO/Projects/Powerwheelsv2/include",
+                    "/home/andrew/Documents/PlatformIO/Projects/Powerwheelsv2/src",
+                    "/home/andrew/.platformio/lib/Servo_ID883/src",
+                    "/home/andrew/Documents/PlatformIO/Projects/Powerwheelsv2/.pio/libdeps/megaatmega2560/RTC_ID274/src",
+                    "/home/andrew/Documents/PlatformIO/Projects/Powerwheelsv2/.pio/libdeps/megaatmega2560/SD_ID161",
+                    "/home/andrew/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src",
+                    "/home/andrew/.platformio/packages/framework-arduinoavr/cores/arduino",
+                    "/home/andrew/.platformio/packages/framework-arduinoavr/variants/mega",
+                    "/home/andrew/Documents/PlatformIO/Projects/Powerwheelsv2/lib/motor",
+                    "/home/andrew/Documents/PlatformIO/Projects/Powerwheelsv2/lib/sparkMotor",
+                    "/home/andrew/.platformio/lib/RTClib_ID83",
+                    "/home/andrew/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/EEPROM/src",
+                    "/home/andrew/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/HID/src",
+                    "/home/andrew/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SoftwareSerial/src",
+                    "/home/andrew/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src",
+                    "/home/andrew/.platformio/packages/tool-unity",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=40100",
+                "ARDUINO_AVR_MEGA2560",
+                "F_CPU=16000000L",
+                "ARDUINO_ARCH_AVR",
+                "ARDUINO=10805",
+                "__AVR_ATmega2560__",
+                ""
+            ],
+            "intelliSenseMode": "clang-x64",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "compilerPath": "\"/home/andrew/.platformio/packages/toolchain-atmelavr/bin/avr-gcc\" -mmcu=atmega2560"
+        }
+    ],
+    "version": 4
+}
