@@ -6,7 +6,7 @@ class Controller
         virtual bool poll();
         int  getX();
         int  getY();
-    private:
+    protected:
         int mXVal;
         int mYVal;
 
