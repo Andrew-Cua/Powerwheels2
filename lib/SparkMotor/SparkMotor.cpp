@@ -7,6 +7,6 @@ SparkMotor::SparkMotor(int pin, bool inverted) : servoPin(pin)
 
 void SparkMotor::set(float speed)
 {
-    int servoSpeed = mapfloat((mInverted ?  -1*speed : speed ),-1,1,1000,2000);
+    int servoSpeed = Util::mapfloat((mInverted ?  -1*speed : speed ),-1,1,1000,2000);
     servo -> writeMicroseconds(servoSpeed);
 }
