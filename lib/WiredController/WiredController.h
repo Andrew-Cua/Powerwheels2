@@ -1,6 +1,6 @@
 #ifndef WIREDCONTROLLER_H
 #define WIREDCONTROLLER_H
-#include <controller.h>
+#include <Controller.h>
 #include <Arduino.h>
 class WiredController : public Controller
 {

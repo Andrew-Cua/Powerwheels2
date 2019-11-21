@@ -1,4 +1,4 @@
-#include "wiredController.h"
+#include "WiredController.h"
 
 
 WiredController::WiredController(int xPin, int yPin)

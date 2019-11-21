@@ -1,9 +1,9 @@
 
 #ifndef SPARKMOTOR_H
 #define SPARKMOTOR_H
-#include <motor.h>
+#include <Motor.h>
 #include <Servo.h>
-#include <util.h>
+#include <Util.h>
 class SparkMotor : public Motor
 {
     public:

@@ -1,6 +1,6 @@
 #ifndef CURVATUREDRIVE_H
 #define CURVATUREDRIVE_H
-#include <motor.h>
+#include <Motor.h>
 class DifferentialDrive
 {
     public:

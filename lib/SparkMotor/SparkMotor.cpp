@@ -1,4 +1,4 @@
-#include <sparkMotor.h>
+#include <SparkMotor.h>
 SparkMotor::SparkMotor(int pin, bool inverted) : servoPin(pin)
 {
     setInverted(inverted);
