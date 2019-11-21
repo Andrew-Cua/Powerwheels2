@@ -4,7 +4,7 @@
 class DifferentialDrive
 {
     public:
-        void set(float x, float y);
+        void set(float left, float right);
         void stop();
         DifferentialDrive(Motor* left, Motor* right);
     private:
