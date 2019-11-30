@@ -10,7 +10,7 @@ float Util::mapToFloat(int x, int in_min, int in_max, float out_min, float out_m
 }
 float Util::fClamp(float x, float deadband, int nominalValue)
 {
-    if(fabs(x) <= fabs(x)+deadband && fabs(x) >= fabs(x)- deadband)
+    if(fabs(x) <= nominalValue+deadband && fabs(x) >= nominalValue- deadband)
     {
         return nominalValue;
     }else
