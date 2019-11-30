@@ -14,3 +14,8 @@ void Motor::setInverted(bool inverted)
 {
   mInverted = inverted;
 }
+
+bool Motor::getInverted()
+{
+  return mInverted;
+}

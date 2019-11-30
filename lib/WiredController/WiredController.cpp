@@ -1,5 +1,5 @@
 #include "WiredController.h"
-
+#include <Util.h>
 
 WiredController::WiredController(int xPin, int yPin)
 {
@@ -9,8 +9,8 @@ WiredController::WiredController(int xPin, int yPin)
 
 bool WiredController::poll()
 {
-    mXVal = analogRead(mXPin);
-    mYVal = analogRead(mYPin);
+    mXVal = Util::clamp(analogRead(mXPin) - scale,20,0);
+    mYVal = Util::clamp(analogRead(mYPin) - scale,20,0);
 
     return true;
 }

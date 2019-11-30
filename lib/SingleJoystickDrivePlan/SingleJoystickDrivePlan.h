@@ -3,6 +3,7 @@
 #include <DifferentialDrive.h>
 #include <ControlPlan.h>
 #include <Controller.h>
+#include <Util.h>
 class SingleJoystickDrivePlan : public ControlPlan
 {
     public: 
