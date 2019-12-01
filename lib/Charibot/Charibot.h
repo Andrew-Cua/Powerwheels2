@@ -6,6 +6,7 @@
 #include <Motor.h>
 #include <Arduino.h>
 #include <HardwareSerial.h>
+#include <Filter.h>
 class Charibot
 {
     public:
@@ -22,6 +23,8 @@ class Charibot
         DifferentialDrive  *pDifferentialDrive;
         Motor              *pLeftMotor;
         Motor              *pRightMotor;
+        Filter<int>        *pXNoiseFilter;
+        Filter<int>        *pYNoiseFilter;
         
 };
 #endif

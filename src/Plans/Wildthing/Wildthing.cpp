@@ -7,6 +7,8 @@ const int JOYSTICK_X_PIN = A11;
 
 const int LEFT_MOTOR_PIN = 5;
 const int RIGHT_MOTOR_PIN = 6;
+
+const int NOISE_WEIGHT = 80;
 Wildthing::Wildthing()
 {
     pController         = new WiredController(JOYSTICK_X_PIN,JOYSTICK_X_PIN);
