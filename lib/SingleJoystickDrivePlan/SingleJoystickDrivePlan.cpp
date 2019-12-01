@@ -4,6 +4,7 @@ void SingleJoystickDrivePlan::refresh(bool controllerUpdated)
 {
     float fwd = Util::mapToFloat(pController.getY(), -512, 512, -1, 1);
     float rot = Util::mapToFloat(pController.getX(), -512, 512, -1, 1);
+    float speedLimiter = Util::mapToFloat(analogRead(0),-0,1024,0,1);
     float angularPower;
     bool isQuickTurn = (Util::fDeadBand(fwd, 0.1, 0) == 0);
     Serial.println(isQuickTurn);
@@ -65,5 +66,5 @@ void SingleJoystickDrivePlan::refresh(bool controllerUpdated)
         }
     }
 
-    pDrive.set(left, right);
+    pDrive.set(left*speedLimiter, right*speedLimiter);
 }
