@@ -10,7 +10,7 @@ class SparkMotor : public Motor
         SparkMotor(int pin, bool inverted = false);
         virtual void set(float speed) override;
     private:
-        Servo* servo;
+        Servo servo;
         int servoPin;
 };
 

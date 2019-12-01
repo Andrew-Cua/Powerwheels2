@@ -15,6 +15,8 @@ class SingleJoystickDrivePlan : public ControlPlan
 
     private:
         DifferentialDrive &pDrive;
+        double quickStopAccumulator = 0;
+        const double quickStopAlpha = 0.1;
         
 
 };

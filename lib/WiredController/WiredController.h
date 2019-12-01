@@ -15,7 +15,5 @@ class WiredController : public Controller
         const int NOMINAL_VAL = 512;
         int mXPin;
         int mYPin;
-        int mXValue;
-        int mYValue;
 };
 #endif
