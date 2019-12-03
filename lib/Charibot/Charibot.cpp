@@ -9,11 +9,13 @@ Charibot::Charibot()
 void Charibot::setup()
 {
     consoleSerial.begin(serialBaudRate);
-    while(!consoleSerial){}
+    xbeeSerial.begin(serialBaudRate);
+    while(!consoleSerial && !xbeeSerial){}
 }
 
 void Charibot::loop()
 {
-    bool connected = pController->poll();
-    pControlPlan->refresh(connected);
+    bool oneConnected = pControllerOne->poll();
+    bool twoConnected = pControllerTwo->poll();
+    pControlPlan->refresh(oneConnected || twoConnected);
 }

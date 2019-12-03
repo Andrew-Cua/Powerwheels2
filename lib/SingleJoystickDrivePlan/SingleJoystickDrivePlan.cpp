@@ -2,8 +2,17 @@
 
 void SingleJoystickDrivePlan::refresh(bool controllerUpdated)
 {
-    float fwd = Util::mapToFloat(pController.getY(), -512, 512, -1, 1);
-    float rot = Util::mapToFloat(pController.getX(), -512, 512, -1, 1);
+    //find if controller one is active
+    if(pControllerOne.isConnected() && (abs(pControllerOne.getY()) > 75 || abs(pControllerOne.getX()) > 75))
+    {
+        pActiveController = pControllerOne;
+    }else
+    {
+        pActiveController = pControllerTwo;
+    }
+    
+    float fwd = Util::mapToFloat(pActiveController.getY(), -512, 512, -1, 1);
+    float rot = Util::mapToFloat(pActiveController.getX(), -512, 512, -1, 1);
     float speedLimiter = Util::mapToFloat(analogRead(0),-0,1024,0,1);
     float angularPower;
     bool isQuickTurn = (Util::fDeadBand(fwd, 0.1, 0) == 0);

@@ -15,9 +15,11 @@ class Charibot
     protected:
         //computer stuff
         HardwareSerial     &consoleSerial = Serial;
+        HardwareSerial     &xbeeSerial = Serial1;
         const int   serialBaudRate = 9600;
         //chair stuff
-        Controller         *pController;
+        Controller         *pControllerOne;
+        Controller         *pControllerTwo;
         ControlPlan        *pControlPlan;
         DifferentialDrive  *pDifferentialDrive;
         Motor              *pLeftMotor;

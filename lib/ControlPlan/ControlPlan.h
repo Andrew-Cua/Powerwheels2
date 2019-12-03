@@ -6,9 +6,11 @@ class ControlPlan
 {
     public:
         virtual void refresh(bool controllerUpdated);
-        ControlPlan(Controller &controller) :
-            pController(controller) {};
+        ControlPlan(Controller &controllerOne, Controller &controllerTwo) :
+            pControllerOne(controllerOne), pControllerTwo(controllerTwo), pActiveController(controllerTwo) {};
     protected:
-        Controller &pController;
+        Controller &pControllerOne;
+        Controller &pControllerTwo;
+        Controller &pActiveController;
 };
 #endif
