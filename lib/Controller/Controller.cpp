@@ -28,3 +28,4 @@ bool Controller::getButton(int button) const {
  */
 bool Controller::isConnected() const {
   return mConnected;
+}

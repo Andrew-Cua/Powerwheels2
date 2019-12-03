@@ -10,7 +10,6 @@ bool WirelessController::poll()
         mConnected = (now - lastMessageTime >= DISCONNECT_TIME);
         return false;
     }
-
     parseMsg(msg);
     lastMessageTime = now;
     mConnected = true;
@@ -51,7 +50,8 @@ void WirelessController::parseMsg(char *msg)
 
     // Then joystick values, passed as -512 to 511.
     mXVal = atoi(strtok(nullptr, SPACES));
-    mXVal = atoi(strtok(nullptr, SPACES));
+    mYVal = atoi(strtok(nullptr, SPACES));
+    //Serial.println(mYVal);
 }
 
 // Gather characters from the serial port and return

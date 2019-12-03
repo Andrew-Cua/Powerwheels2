@@ -7,7 +7,6 @@ void SingleJoystickDrivePlan::refresh(bool controllerUpdated)
     float speedLimiter = Util::mapToFloat(analogRead(0),-0,1024,0,1);
     float angularPower;
     bool isQuickTurn = (Util::fDeadBand(fwd, 0.1, 0) == 0);
-    Serial.println(isQuickTurn);
     float left;
     float right;
     bool overPower = false;

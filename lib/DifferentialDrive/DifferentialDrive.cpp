@@ -7,6 +7,7 @@ void DifferentialDrive::set(float left, float right)
 {
     leftMotor.set(left);
     rightMotor.set(right);
+    Serial.println(left);
 }
 
 void DifferentialDrive::stop()
