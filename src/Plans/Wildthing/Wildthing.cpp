@@ -5,8 +5,8 @@
 const int JOYSTICK_Y_PIN = 12;
 const int JOYSTICK_X_PIN = 11; 
 
-const int LEFT_MOTOR_PIN = 6;
-const int RIGHT_MOTOR_PIN = 7;
+const int LEFT_MOTOR_PIN = 5;
+const int RIGHT_MOTOR_PIN = 6;
 
 const int NOISE_WEIGHT = 80;
 Wildthing::Wildthing()
