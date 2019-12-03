@@ -49,7 +49,7 @@ void WirelessController::parseMsg(char *msg)
     }
 
     // Then joystick values, passed as -512 to 511.
-    mXVal = atoi(strtok(nullptr, SPACES));
+    mXVal = -atoi(strtok(nullptr, SPACES));
     mYVal = atoi(strtok(nullptr, SPACES));
     //Serial.println(mYVal);
 }
