@@ -16,15 +16,18 @@ Wildthing::Wildthing()
 
 void Wildthing::setup()
 {
+    xbeeSerial.begin(9600);
+    while(!xbeeSerial){}
     Charibot::setup();
-    pController         = new WiredController(JOYSTICK_X_PIN,JOYSTICK_Y_PIN);
+    pController         = new WirelessController(xbeeSerial);
     pLeftMotor          = new SparkMotor(LEFT_MOTOR_PIN, true);
     pRightMotor         = new SparkMotor(RIGHT_MOTOR_PIN,false);
     pDifferentialDrive  = new DifferentialDrive(*pLeftMotor,*pRightMotor);
-    pControlPlan        = new SingleJoystickDrivePlan(*pDifferentialDrive,*pController);
+    pControlPlan        = new SingleJoystickDrivePlan(*pDifferentialDrive,*pController); 
 }
 
 void Wildthing::loop()
 {
+    
     Charibot::loop();
 }
