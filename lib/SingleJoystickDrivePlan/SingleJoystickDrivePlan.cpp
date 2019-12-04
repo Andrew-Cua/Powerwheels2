@@ -3,11 +3,13 @@
 void SingleJoystickDrivePlan::refresh(bool controllerUpdated)
 {
     //find if controller one is active
-    if(pControllerOne.isConnected() && (abs(pControllerOne.getY()) > 75 || abs(pControllerOne.getX()) > 75))
+    if((abs(pControllerOne.getY()) > 10 || abs(pControllerOne.getX()) > 10))
     {
         pActiveController = pControllerOne;
+        Serial.println("using remote");
     }else
     {
+        Serial.println("using wired");
         pActiveController = pControllerTwo;
     }
     
