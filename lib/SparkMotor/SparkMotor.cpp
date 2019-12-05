@@ -12,5 +12,4 @@ void SparkMotor::set(float speed)
     int servoSpeed = Util::mapFromFloat((mInverted ?  -1*speed : speed ),-1,1,1000,2000);
     mSpeed = servo.readMicroseconds();
     servo.writeMicroseconds(servoSpeed);
-    //Serial.println(speed);
 }
