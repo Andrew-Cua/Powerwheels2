@@ -21,6 +21,7 @@ void JoystickHandler::update()
             //Serial.println("wired remote");
             activeController = mJoysticks[WIRED_JOYSTICK_INDEX];
         }
+        //Serial.println(mJoysticks[i]->getY());
         
     }
 }

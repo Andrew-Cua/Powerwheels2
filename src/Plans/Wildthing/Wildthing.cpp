@@ -22,8 +22,8 @@ void Wildthing::setup()
     pControllerOne      = new WirelessController(xbeeSerial);
     pControllerTwo      = new WiredController(JOYSTICK_X_PIN,JOYSTICK_Y_PIN);
     pJoystickHandler    = new JoystickHandler();
-    pJoystickHandler ->addController(pControllerOne);
-    pJoystickHandler ->addController(pControllerTwo);
+    //pJoystickHandler ->addController(pControllerOne);
+    //pJoystickHandler ->addController(pControllerTwo);
     pLeftMotor          = new SparkMotor(LEFT_MOTOR_PIN, true);
     pRightMotor         = new SparkMotor(RIGHT_MOTOR_PIN,false);
     pDifferentialDrive  = new DifferentialDrive(*pLeftMotor,*pRightMotor);
@@ -34,5 +34,6 @@ void Wildthing::setup()
 
 void Wildthing::loop()
 {
+    pControllerOne -> poll();
     Charibot::loop();
 }
