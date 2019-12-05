@@ -6,6 +6,7 @@
 #include <Motor.h>
 #include <Arduino.h>
 #include <HardwareSerial.h>
+#include <JoystickHandler.h>
 class Charibot
 {
     public:
@@ -20,6 +21,7 @@ class Charibot
         //chair stuff
         Controller         *pControllerOne;
         Controller         *pControllerTwo;
+        JoystickHandler    *pJoystickHandler;
         ControlPlan        *pControlPlan;
         DifferentialDrive  *pDifferentialDrive;
         Motor              *pLeftMotor;

@@ -15,7 +15,6 @@ void Charibot::setup()
 
 void Charibot::loop()
 {
-    bool oneConnected = pControllerOne->poll();
-    bool twoConnected = pControllerTwo->poll();
-    pControlPlan->refresh(oneConnected || twoConnected);
+    pJoystickHandler ->update();
+    pControlPlan->refresh(true);
 }

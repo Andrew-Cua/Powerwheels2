@@ -8,13 +8,15 @@ const int WIRED_JOYSTICK_INDEX = 1;
 class JoystickHandler
 {
     public:
+        JoystickHandler();
         void update();
-        void addController(Controller& joystick, int index);
-        Controller& getActiveController(){return pActiveController;}
+        void addController(Controller* joystick);
+        Controller* getActiveController(){return activeController;}
     private:
-        Controller mJoysticks[MAX_JOYSTICKS];
+        Controller* mJoysticks[MAX_JOYSTICKS];
         bool       mJoysticksConnected[MAX_JOYSTICKS];
-        Controller &pActiveController;
+        Controller* activeController;
+        int nJoysticks =0;
         
 };
-#endif;
+#endif

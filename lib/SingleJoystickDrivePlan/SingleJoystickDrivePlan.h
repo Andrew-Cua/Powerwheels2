@@ -7,8 +7,8 @@
 class SingleJoystickDrivePlan : public ControlPlan
 {
     public: 
-        SingleJoystickDrivePlan(DifferentialDrive &diffdrive, Controller &controllerOne, Controller &controllerTwo)
-        : ControlPlan(controllerOne,controllerTwo), pDrive(diffdrive)
+        SingleJoystickDrivePlan(DifferentialDrive &diffdrive, JoystickHandler handler)
+        : ControlPlan(handler), pDrive(diffdrive)
         {
         };
         void refresh(bool controllerUpdated);

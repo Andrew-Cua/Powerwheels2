@@ -3,18 +3,9 @@
 void SingleJoystickDrivePlan::refresh(bool controllerUpdated)
 {
     //find if controller one is active
-    if((abs(pControllerOne.getY()) > 10 || abs(pControllerOne.getX()) > 10))
-    {
-        pActiveController = pControllerOne;
-        Serial.println("using remote");
-    }else
-    {
-        Serial.println("using wired");
-        pActiveController = pControllerTwo;
-    }
     
-    float fwd = Util::mapToFloat(pActiveController.getY(), -512, 512, -1, 1);
-    float rot = Util::mapToFloat(pActiveController.getX(), -512, 512, -1, 1);
+    float fwd = Util::mapToFloat(pHandler.getActiveController()->getY(), -512, 512, -1, 1);
+    float rot = Util::mapToFloat(pHandler.getActiveController()->getX(), -512, 512, -1, 1);
     float speedLimiter = Util::mapToFloat(analogRead(0),-0,1024,0,1);
     float angularPower;
     bool isQuickTurn = (Util::fDeadBand(fwd, 0.1, 0) == 0);
@@ -75,6 +66,6 @@ void SingleJoystickDrivePlan::refresh(bool controllerUpdated)
             left -= right + 1;
         }
     }
-    //Serial.println(left);
+    //Serial.println(fwd);
     pDrive.set(left, right);
 }
