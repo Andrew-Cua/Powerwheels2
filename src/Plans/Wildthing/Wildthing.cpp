@@ -29,6 +29,5 @@ void Wildthing::setup()
 
 void Wildthing::loop()
 {
-    //Serial.println(pControllerOne->getY());
     Charibot::loop();
 }
