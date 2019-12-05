@@ -10,13 +10,15 @@ class JoystickHandler
     public:
         JoystickHandler();
         void update();
+        int activeIndex(){return activeJoystickIndex;}
         void addController(Controller* joystick);
-        Controller* getActiveController(){return activeController;}
+        Controller* getActiveController(){return mJoysticks[activeJoystickIndex];}
     private:
         Controller* mJoysticks[MAX_JOYSTICKS];
         bool       mJoysticksConnected[MAX_JOYSTICKS];
-        Controller* activeController;
+        void setActive(int active){activeJoystickIndex=active;};
         int nJoysticks =0;
+        int activeJoystickIndex = 1;
         
 };
 #endif

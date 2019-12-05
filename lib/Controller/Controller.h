@@ -10,8 +10,8 @@ class Controller
         bool isConnected() const;
         bool getButton(int button) const;
     protected:
-        int mXVal;
-        int mYVal;
+        int mXVal = 0;
+        int mYVal = 0;
         bool mConnected = false;
         bool currentButtons[MAX_BUTTONS];
 

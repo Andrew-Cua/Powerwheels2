@@ -7,7 +7,7 @@
 class SingleJoystickDrivePlan : public ControlPlan
 {
     public: 
-        SingleJoystickDrivePlan(DifferentialDrive &diffdrive, JoystickHandler handler)
+        SingleJoystickDrivePlan(DifferentialDrive &diffdrive, JoystickHandler& handler)
         : ControlPlan(handler), pDrive(diffdrive)
         {
         };

@@ -3,7 +3,7 @@
 void SingleJoystickDrivePlan::refresh(bool controllerUpdated)
 {
     //find if controller one is active
-    
+    //pHandler.update();
     float fwd = Util::mapToFloat(pHandler.getActiveController()->getY(), -512, 512, -1, 1);
     float rot = Util::mapToFloat(pHandler.getActiveController()->getX(), -512, 512, -1, 1);
     float speedLimiter = Util::mapToFloat(analogRead(0),-0,1024,0,1);
@@ -66,6 +66,6 @@ void SingleJoystickDrivePlan::refresh(bool controllerUpdated)
             left -= right + 1;
         }
     }
-    //Serial.println(fwd);
+    Serial.println(fwd);
     pDrive.set(left, right);
 }
