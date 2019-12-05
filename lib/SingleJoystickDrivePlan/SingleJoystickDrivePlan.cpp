@@ -6,7 +6,7 @@ void SingleJoystickDrivePlan::refresh(bool controllerUpdated)
     //pHandler.update();
     float fwd = Util::mapToFloat(pHandler.getActiveController()->getY(), -512, 512, -1, 1);
     float rot = Util::mapToFloat(pHandler.getActiveController()->getX(), -512, 512, -1, 1);
-    float speedLimiter = Util::mapToFloat(analogRead(0),-0,1024,0,1);
+    //float speedLimiter = Util::mapToFloat(analogRead(0),-0,1024,0,1);
     float angularPower;
     bool isQuickTurn = (Util::fDeadBand(fwd, 0.1, 0) == 0);
     float left;
